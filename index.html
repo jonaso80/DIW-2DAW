@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pure Aero Rafa Origin | The King's Weapon</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      :root {
+        --rafa-yellow: #e1ff00;
+        --rafa-pink: #ec008c;
+        --rafa-blue: #00a1df;
+        --dark-bg: #0a0a0a;
+        --text-muted: #b0b0b0;
+      }
+
+      body {
+        background-color: var(--dark-bg);
+        color: white;
+        font-family: "Segoe UI", Roboto, sans-serif;
+        overflow-x: hidden;
+      }
+
+      :focus {
+        outline: 2px solid var(--rafa-yellow);
+        outline-offset: 3px;
+      }
+
+      .cursor-glow {
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(
+          circle,
+          rgba(225, 255, 0, 0.1) 0%,
+          rgba(236, 0, 140, 0.05) 50%,
+          transparent 70%
+        );
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+      }
+
+      .hero-visual {
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), var(--dark-bg)),
+          url("https://images.unsplash.com/photo-1599586120429-48281b6f0ece?auto=format&fit=crop&q=80&w=2000");
+        background-attachment: fixed;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+      }
+
+      .main-title {
+        font-size: clamp(2.5rem, 8vw, 7rem);
+        font-weight: 900;
+        text-shadow: 0 0 20px var(--rafa-pink);
+        line-height: 1;
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 30px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .glass-card:hover {
+        border-color: var(--rafa-yellow);
+        transform: translateY(-10px);
+        box-shadow: 0 10px 40px rgba(225, 255, 0, 0.15);
+      }
+
+      .btn-action {
+        display: inline-block;
+        padding: 16px 42px;
+        font-weight: bold;
+        border-radius: 50px;
+        background: linear-gradient(45deg, var(--rafa-pink), var(--rafa-blue));
+        color: white !important;
+        text-decoration: none !important;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: none;
+      }
+
+      .btn-action:hover {
+        box-shadow: 0 0 30px var(--rafa-pink);
+        transform: scale(1.05);
+      }
+
+      .raqueta-img {
+        max-width: 100%;
+        height: auto;
+        filter: drop-shadow(0 0 30px rgba(236, 0, 140, 0.3));
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(2deg); }
+        50% { transform: translateY(-15px) rotate(-2deg); }
+      }
+
+      .spec-number {
+        font-size: 3rem;
+        font-weight: 800;
+        background: linear-gradient(var(--rafa-yellow), var(--rafa-pink));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @media (max-width: 768px) {
+        .hero-visual {
+          height: 75vh;
+          clip-path: none;
+        }
+        .main-title {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#info" class="visually-hidden-focusable">Saltar al contenido</a>
+
+    <div class="cursor-glow" id="glow" aria-hidden="true"></div>
+
+    <header class="hero-visual">
+      <div class="container text-center">
+        <h1 class="main-title animate__animated animate__zoomIn">
+          PURE AERO<br /><span style="color: var(--rafa-yellow)">RAFA</span>
+        </h1>
+        <p class="lead fs-2 mt-3 animate__animated animate__fadeInUp animate__delay-1s">
+          ORIGIN EDITION
+        </p>
+        <div class="animate__animated animate__fadeInUp animate__delay-2s mt-5">
+          <a href="#info" class="btn-action">Explorar el poder</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="info">
+      <section class="py-5">
+        <div class="container py-5">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+              <h2 class="display-3 fw-bold mb-4">
+                MÁS EFECTO. <br /><span style="color: var(--rafa-pink)">MÁS FUERZA.</span>
+              </h2>
+              <p class="fs-5" style="color: var(--text-muted)">
+                Esta no es una raqueta para cualquiera. Es la configuración
+                exacta que Rafa ha usado durante décadas:
+                <strong>317 gramos</strong> de puro peso para aplastar la bola
+                con un swingweight masivo.
+              </p>
+
+              <div class="mt-4">
+                <div class="d-flex flex-wrap gap-3">
+                  <div class="p-2 border-start border-3 border-warning">
+                    Rigidez 73 RA
+                  </div>
+                  <div class="p-2 border-start border-3 border-info">
+                    Swingweight 330
+                  </div>
+                  <div class="p-2 border-start border-3 border-danger">
+                    Grip Syntec Pro
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center" data-aos="zoom-in-up">
+              <img
+                src="raqueta-removebg-preview.png"
+                alt="Babolat Pure Aero Rafa Origin"
+                class="raqueta-img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 bg-black">
+        <div class="container">
+          <div class="row g-4 text-center justify-content-center">
+            <div class="col-sm-6 col-md-4" data-aos="flip-left">
+              <div class="glass-card h-100">
+                <div class="spec-number">317g</div>
+                <div class="text-uppercase fw-bold mt-2" style="letter-spacing: 2px">
+                  Peso Letal
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4" data-aos="flip-left" data-aos-delay="200">
+              <div class="glass-card h-100">
+                <div class="spec-number">100sq</div>
+                <div class="text-uppercase fw-bold mt-2" style="letter-spacing: 2px">
+                  Tamiz Aero
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4" data-aos="flip-left" data-aos-delay="400">
+              <div class="glass-card h-100">
+                <div class="spec-number">16/19</div>
+                <div class="text-uppercase fw-bold mt-2" style="letter-spacing: 2px">
+                  Patrón de Spin
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="py-5 d-flex align-items-center"
+        style="background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%); min-height: 400px"
+      >
+        <div class="container text-center">
+          <div data-aos="zoom-in">
+            <h3 class="display-5 fw-bold mb-3">
+              ¿LISTO PARA EL
+              <span style="color: var(--rafa-blue)">DOMINIO?</span>
+            </h3>
+            <p
+              class="fs-5 mx-auto mb-5"
+              style="
+                max-width: 600px;
+                border-left: 5px solid var(--rafa-pink);
+                padding-left: 20px;
+                color: var(--text-muted);
+              "
+            >
+              Siente la misma herramienta que conquistó
+              <span class="fw-bold text-warning">22 Grand Slams</span>.
+            </p>
+            <a
+              href="https://www.tennis-point.es/babolat-rafael-nadal-pure-aero-origin-0090620290400003.html?refID=p-sumas/es/froogle&utm_source=google&utm_campaign=rla&utm_source=google&utm_medium=cpc&utm_campaign=TP_ESS_CSS_PMax_smec_Prio1&gad_source=1&gad_campaignid=21833866471&gbraid=0AAAAADq1E7l_AUugJ1P2GtZMk9ikP05o-&gclid=Cj0KCQiA9t3KBhCQARIsAJOcR7zwTiI3ypkOLSgJR-q6au8haxn4TWD2nVrpCbSEDdK9kMJp2-OiEbUaAhWmEALw_wcB"
+              class="btn-action shadow-lg"
+              target="_blank"
+              rel="noopener"
+            >
+              CONSEGUIR MI ORIGIN
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4 text-center border-top border-secondary">
+      <p class="small text-secondary mb-0">
+        © 2024 - Tributo Rafael Nadal Pure Aero Origin
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+
+      const glow = document.getElementById("glow");
+      window.addEventListener("mousemove", (e) => {
+        glow.style.left = `${e.clientX}px`;
+        glow.style.top = `${e.clientY}px`;
+      });
+    </script>
+  </body>
+</html>
